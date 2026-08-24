@@ -72,6 +72,8 @@ Examples:
                         help="FFmpeg encoding speed preset (default: medium)")
     parser.add_argument('--max-frames', type=int, default=None,
                         help="Limit processing to the first N frames (useful for testing/previewing)")
+    parser.add_argument('--num-workers', type=int, default=4,
+                        help="Number of parallel workers for frame directory upscaling (default: 4)")
     parser.add_argument('--fp32', action='store_true',
                         help="Force full FP32 precision instead of FP16 half precision")
 
@@ -103,7 +105,9 @@ Examples:
             output_dir=output_path,
             upscaler=upscaler,
             target_res=target_res,
-            batch_size=args.batch_size
+            batch_size=args.batch_size,
+            num_workers=args.num_workers,
+            max_frames=args.max_frames
         )
     else:
         ext = os.path.splitext(input_path)[1].lower()
