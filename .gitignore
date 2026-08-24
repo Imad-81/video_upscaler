@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Model weights & checkpoints (auto-downloaded on run)
+weights/
+*.pth
+*.pt
+*.onnx
+*.bin
+*.ckpt
+*.download
+
+# Video formats (Do not commit video files)
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.flv
+*.webm
+*.ts
+*.m4v
+*.wmv
+*.mpeg
+*.mpg
+*.3gp
+
+# Image formats (Do not commit image frames/photos)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.bmp
+*.tiff
+*.tif
+*.gif
+*.ico
+*.raw
+
+# Test & scratch directories
+test_frames_*/
+*_upscaled/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
